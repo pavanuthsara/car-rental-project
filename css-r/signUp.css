@@ -1,0 +1,23 @@
+#div1{
+    box-sizing: border-box;
+    border-radius: 40px;
+    background-color: rgb(39, 107, 255);
+    padding: 150px;
+    width: 50%;
+    margin: 0 auto;
+    height: 900px;
+    text-align: center;
+}
+
+.input{
+    border: solid 1px;
+    border-radius: 5px;
+    width: 70%;
+    height: 30px;
+}
+.input2{
+    border: solid 1px;
+    border-radius: 5px;
+    width: 30%;
+    height: 26px;
+}
