@@ -30,4 +30,14 @@ CREATE TABLE car(
 );
 
 /* rentCar table - contains details of rented cars*/
+CREATE TABLE rentCar(
+    regNumber VARCHAR(10) NOT NULL,
+    customerEmail VARCHAR(50) NOT NULL,
+    rentedDate DATE,
+    dueDate DATE,
+    price VARCHAR(10),
 
+    CONSTRAINT pk_rentCar PRIMARY KEY (regNumber,customerEmail),
+    CONSTRAINT fk_rentCar FOREIGN KEY (regNumber) REFERENCES car(regNumber)
+    CONSTRAINT fk_rentCar FOREIGN KEY (customerEmail) REFERENCES customer(email)
+);
