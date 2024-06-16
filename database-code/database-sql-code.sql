@@ -19,7 +19,15 @@ CREATE TABLE owner(
 );
 
 /* car table - contains the details of cars*/
+CREATE TABLE car(
+    regNumber VARCHAR(10) NOT NULL,
+    model VARCHAR(50),
+    ownerEmail VARCHAR(50),
+    pricePerDay VARCHAR(10),
 
+    CONSTRAINT pk_car PRIMARY KEY (regNumber),
+    CONSTRAINT fk_car FOREIGN KEY (ownerEmail) REFERENCES owner(email)
+);
 
 /* rentCar table - contains details of rented cars*/
 
